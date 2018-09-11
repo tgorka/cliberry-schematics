@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "cliberryschematicsinit",
-  "title": "cliberry schematics init Options Schema",
+  "id": "@cliberry/schematics#init",
+  "title": "@cliberry/schematics init Options Schema",
   "type": "object",
   "properties": {
     "name": {
