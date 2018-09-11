@@ -1,5 +1,5 @@
 {
-  "name": "@cliberry/schematics",
+  "name": "cliberry-schematics",
   "version": "0.0.1",
   "description": "Collection for schematics template used in cliberry/schematics/angular cli that creates empty template for cliberry/schematics/angular.",
   "main": "index",
