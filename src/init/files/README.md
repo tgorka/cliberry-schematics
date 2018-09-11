@@ -1,10 +1,14 @@
 # <%= name %>
 
 [![Version npm](https://img.shields.io/npm/v/<%= utils.dasherize(name) %>.svg)](https://www.npmjs.com/package/<%= utils.dasherize(name) %>)
-[![Build Status](https://travis-ci.org/tgorka/<%= utils.dasherize(name) %>.svg?branch=master)](https://travis-ci.org/tgorka/<%= utils.dasherize(name) %>)
-[![Dependency Status](https://david-dm.org/tgorka/<%= utils.dasherize(name) %>.svg)](https://david-dm.org/tgorka/<%= utils.dasherize(name) %>)
-[![Coverage percentage](https://coveralls.io/repos/tgorka/<%= utils.dasherize(name) %>/badge.svg)](https://coveralls.io/r/tgorka/<%= utils.dasherize(name) %>)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) 
+[![Github Downloads](https://img.shields.io/github/downloads/tgorka/<%= utils.dasherize(name) %>/total.svg)](https://github.com/tgorka/<%= utils.dasherize(name) %>)
+[![NPM Downloads](https://img.shields.io/npm/dt/<%= utils.dasherize(name) %>.svg)](https://www.npmjs.com/package/<%= utils.dasherize(name) %>)
+[![NPM Gziped size](https://img.shields.io/bundlephobia/minzip/<%= utils.dasherize(name) %>.svg)](https://www.npmjs.com/package/<%= utils.dasherize(name) %>)
+[![Dependency Status](https://david-dm.org/tgorka/<%= utils.dasherize(name) %>.svg)](https://david-dm.org/tgorka/<%= utils.dasherize(name) %>)
+[![Build Status](https://travis-ci.org/tgorka/<%= utils.dasherize(name) %>.svg?branch=master)](https://travis-ci.org/tgorka/<%= utils.dasherize(name) %>)
+[![Coverage percentage](https://coveralls.io/repos/tgorka/<%= utils.dasherize(name) %>/badge.svg)](https://coveralls.io/r/tgorka/<%= utils.dasherize(name) %>)
+
 
 <%= description %>
 
