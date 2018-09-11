@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "collections": {
+    "schematics": {
+      "init": {
+        "version": "0.0.1",
+        "parameters": {
+          "alias": "schematics",
+          "name": "cliberry-schematics",
+          "description": "Collection for schematics template used in cliberry/schematics/angular cli that creates empty template for cliberry/schematics/angular."
+        }
+      }
+    }
+  }
+}

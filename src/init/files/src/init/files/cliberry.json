@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "collections": {
+    "<%= alias %>": {
+      "init": {
+        "version": "0.0.1",
+        "parameters": {
+          "name": "<%= name %>",
+          "description": "<%= description %>"
+        }
+      }
+    }
+  }
+}
