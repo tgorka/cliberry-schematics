@@ -1,12 +1,11 @@
 {
   "name": "cliberry-schematics",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Collection for schematics template used in cliberry/schematics/angular cli that creates empty template for cliberry/schematics/angular.",
   "main": "./src/index",
   "schematics": "./src/collection.json",
   "scripts": {
     "schematics": "schematics",
-    "cliberry": "cliberry",
     "build": "yarn --dev && tsc -p tsconfig.json",
     "test": "yarn build && jasmine src/**/*.spec.js"
   },
@@ -38,7 +37,6 @@
     "@angular-devkit/schematics-cli": "^0.8.1",
     "@types/jasmine": "^2.8.8",
     "@types/node": "^10.9.4",
-    "cliberry": "^0.1.4",
     "jasmine": "^3.2.0",
     "typescript": "^3.0.3"
   }

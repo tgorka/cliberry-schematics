@@ -9,11 +9,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
-- update the uld of the badge in the template
+
+
+## [0.0.5] - 2018-09-11
+### Added
+- use cliberry.json support for the project
+- generate cliberry.json
+
+### Removed
+- don't use cliberry in a dev package not using circular dependency
+
+### Fixed
+- update the url of the badge in the template
+- dot with the names
+
 
 ## [0.0.4] - 2018-09-11
 ### Fixed
 - index not compiled with ts
+
 
 ## [0.0.3] - 2018-09-11
 ### Added
