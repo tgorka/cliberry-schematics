@@ -1,8 +1,8 @@
 {
   "name": "cliberry-schematics",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Collection for schematics template used in cliberry/schematics/angular cli that creates empty template for cliberry/schematics/angular.",
-  "main": "index",
+  "main": "./src/index",
   "schematics": "./src/collection.json",
   "scripts": {
     "schematics": "schematics",

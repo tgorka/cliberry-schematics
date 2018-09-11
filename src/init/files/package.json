@@ -2,7 +2,7 @@
   "name": "<%= utils.dasherize(name) %>",
   "version": "0.0.1",
   "description": "<%= description %>",
-  "main": "index",
+  "main": "./src/index",
   "scripts": {
     "schematics": "schematics",
     "cliberry": "cliberry",
