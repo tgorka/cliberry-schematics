@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "@cliberry/schematics#init",
-  "title": "@cliberry/schematics init Options Schema",
+  "id": "<%= utils.dasherize(name) %>.#init",
+  "title": "<%= name %> init Options Schema",
   "type": "object",
   "properties": {
     "name": {
@@ -11,7 +11,7 @@
       "format": "html-selector",
       "$default": {
         "$source": "argv",
-        "index": 1
+        "index": 0
       }
     },
     "description": {
@@ -20,22 +20,12 @@
       "type": "string",
       "$default": {
         "$source": "argv",
-        "index": 2
-      }
-    },
-    "alias": {
-      "alias": "a",
-      "description": "Alias for a cliberry prefix.",
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": 0
+        "index": 1
       }
     }
   },
   "required": [
     "name",
-    "description",
-    "alias"
+    "description"
   ]
 }

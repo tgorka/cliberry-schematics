@@ -6,12 +6,16 @@
  * found in the LICENSE file at https://github.com/tgorka/cliberry/LICENSE
  */
 export interface Schema {
-    /**
-     * The name of the project.
-     */
-    name: string;
-    /**
-     * Short description of the project.
-     */
-    description: string;
+  /**
+   * The name of the project.
+   */
+  name: string;
+  /**
+   * Short description of the project.
+   */
+  description: string;
+  /**
+   * Alias that will be used for cliberry
+   */
+  alias: string;
 }
