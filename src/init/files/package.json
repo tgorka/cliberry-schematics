@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "<%= description %>",
   "main": "./src/index",
+  "schematics": "./src/collection.json",
   "scripts": {
     "schematics": "schematics",
     "cliberry": "cliberry",
