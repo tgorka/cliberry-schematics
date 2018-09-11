@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - use cliberry.json support for the project
 - generate cliberry.json
+- add badge with dependency check
+- add generation of the badg with dependency check
 
 ### Removed
 - don't use cliberry in a dev package not using circular dependency

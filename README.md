@@ -1,6 +1,7 @@
 # cliberry-schematics
 
-[![Version npm](https://img.shields.io/npm/v/@cliberry-schematics.svg)](https://www.npmjs.com/package/cliberry-schematics)
+[![Version npm](https://img.shields.io/npm/v/cliberry-schematics.svg)](https://www.npmjs.com/package/cliberry-schematics)
+[![Dependency Status](https://david-dm.org/tgorka/cliberry-schematics.svg)](https://david-dm.org/tgorka/cliberry-schematics)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) 
 
 Schematics collection for generation angular project with support and configuration for useful framework and tools
