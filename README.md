@@ -1,9 +1,10 @@
 # @cliberry/schematics
 
-[![Version npm](https://img.shields.io/npm/v/node-window-polyfill.svg)](https://www.npmjs.com/package/@cliberry/schematics)
+[![Version npm](https://img.shields.io/npm/v/@cliberry-schematics.svg)](https://www.npmjs.com/package/@cliberry-schematics)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) 
 
 Schematics collection for generation angular project with support and configuration for useful framework and tools
+
 This repository is a basic Schematic/Cliberry implementation that serves as a starting point to create and publish Schematics to NPM.
 
 ## Table of Contents

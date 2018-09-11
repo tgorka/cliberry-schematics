@@ -1,85 +1,119 @@
 # <%= name %>
 
+[![Version npm](https://img.shields.io/npm/v/node-window-polyfill.svg)](https://www.npmjs.com/package/@cliberry/schematics)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) 
+
 <%= description %>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+This repository is a basic Schematic/Cliberry implementation that serves as a starting point to create and publish Schematics to NPM.
 
-To generate the application add globally the libs:
+## Table of Contents
 
-```
-yarn add g cliberry
-```
+* [Installation](#installation)
+* [Usage](#usage)
+* [API](#api)
+* [Testing](#testing)
+* [Unit Testing](#unit-testing)
+* [Publishing](#publishing)
 
-or using npm
+### Installation
 
-```
+For using the cli you need to install the npm package first:
+
+```bash
 npm install g cliberry
 ```
 
-and use command to generate the sources:
+or 
 
-```
-cliberry ng6 new --name "NAME OF YOUR PROJECT" --force --description "DESCRIPTION OF YOUT PROJECT"
+```bash
+yarn g cliberry
 ```
 
-`ng6` can not be needed if it's the default target of ng cli 
-(can be changed) or it can be used as `ng` (can be upgraded).
+and then using cli like an [@angular/cli](https://cli.angular.io/).
+
+The default schematics will be set to local templates if needed. They can be override 
+by adding additional `--collection` parameter.
+
+There is no need to install `@angular/cli` it is included inside `cliberry` tool.
+
+Have fun with using `cliberry` ;).
+
+
+### Usage
+
+#### cliberry
+
+For using the project simply call
+
+```bash
+cliberry <%= alias %> --force new NAME-OF-THE-PROJECT 'DESCRIPTION OF THE PROJECT'
+```
 
 `--force` is not needed for an empty folder
 
-to build the project use build command:
+or to generate part of the project
 
+```bash
+cliberry <%= alias %> g NAME-OF-THE-ACTION
 ```
+
+`<%= alias %>` can not be needed if it's the default target of ng cli 
+(can be changed).
+
+#### @angular/cli
+[Angular CLI](https://github.com/angular/angular-cli)
+
+```bash
+ng c <%= name %> new NAME-OF-THE-PROJECT 'DESCRIPTION OF THE PROJECT'
+```
+
+```bash
+ng c <%= name %> g NAME-OF-THE-ACTION
+```
+
+
+### API
+
+##### cliberry new
+Create new cliberry/schematics collection with:
+  * schematics
+  * debug framework
+  * yarn 
+  * yarn lock file
+  * tests (jasmine, protractor - defaults)
+  * lint
+  * IDEA config 
+  * editorconfig
+  * gitignore
+  * README
+
+### Testing
+
+To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+
+Check the documentation with
+
+```bash
+schematics --help
+```
+
+### Unit Testing
+
+`yarn test` or `npm run test` will run the unit tests, using Jasmine as a runner and test framework.
+
+### Publishing
+
+To publish, simply do:
+
+```bash
 yarn build
+yarn publish
 ```
 
-or 
-
-```
+```bash
 npm run build
+npm publish
 ```
 
-and to create the bundle after the build:
-
-```
-yarn package
-```
-
-or 
-
-```
-npm run package
-```
-
-The generated project will use the web component of the name: `<NAME-OF-YOUR-PROJECT></NAME-OF-YOUR-PROJECT>`
-
-After including generated project bundle with name: `NAME-OF-YOUR-PROJECT.min.js`
-
-To develop the project you can import it into the InteliJ IDEA (or Web Storm) IDE 
-and use defined targets to run the project.
-
-Or use `yarn/npm` to `run/test/lint` the project
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+That's it!
