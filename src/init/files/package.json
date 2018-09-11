@@ -1,0 +1,69 @@
+{
+  "name": "<%= utils.dasherize(name) %>",
+  "version": "0.0.1",
+  "description": "<%= description %>",
+  "main": "index",
+  "scripts": {
+    "ng": "cliberry ng6",
+    "cliberry": "cliberry",
+    "prestart": "yarn --dev",
+    "start": "cliberry ng6 serve",
+    "build": "cliberry ng6 build --prod",
+    "package": "cat dist/{styles,runtime,polyfills,main}.js > dist/<%= utils.dasherize(name) %>.min.js && cat src/index.html > dist/index.html",
+    "test": "cliberry ng6 test",
+    "lint": "cliberry ng6 lint",
+    "e2e": "cliberry ng6 e2e"
+  },
+  "homepage": "https://<%= utils.dasherize(name) %>",
+  "repository": {
+    "type": "git",
+    "url": "https://<%= utils.dasherize(name) %>"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "author": {
+    "name": "",
+    "email": ""
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^6.1.0",
+    "@angular/common": "^6.1.0",
+    "@angular/compiler": "^6.1.0",
+    "@angular/core": "^6.1.0",
+    "@angular/elements": "^6.1.7",
+    "@angular/forms": "^6.1.0",
+    "@angular/http": "^6.1.0",
+    "@angular/platform-browser": "^6.1.0",
+    "@angular/platform-browser-dynamic": "^6.1.0",
+    "@angular/router": "^6.1.0",
+    "@webcomponents/custom-elements": "^1.2.0",
+    "core-js": "^2.5.4",
+    "debug": "^3.1.0",
+    "rxjs": "~6.2.0",
+    "zone.js": "git://github.com/JiaLiPassion/zone.js#duplicate-patch-dist"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.8.0",
+    "@angular/cli": "~6.2.1",
+    "@angular/compiler-cli": "^6.1.0",
+    "@angular/language-service": "^6.1.0",
+    "@types/jasmine": "~2.8.8",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "cliberry": "^0.1.0",
+    "codelyzer": "~4.3.0",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~3.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~1.1.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.11.0",
+    "typescript": "~2.9.2"
+  }
+}

@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+    - yarn --dev
+  pre_build:
+    commands:
+    - aws configure set preview.cloudfront true
+    - bash -c 'echo "Build started `date` for distribution $(eval echo \${DISTRIBUTION_${BRANCH^^}}) / bucket s3://project.${BRANCH,,}.web on branch ${BRANCH}"'
+  build:
+    commands:
+    - yarn build
+    - bash -c 'cat dist/<%= utils.dasherize(name) %>/{runtime,polyfills,styles,main,common}.js > dist/<%= utils.dasherize(name) %>.min.js'
+    - bash -c 'cat src/index.html > dist/index.html'
+    - bash -c 'rm -rf dist/<%= utils.dasherize(name) %>'
+  post_build:
+    commands:
+    - bash -c 'aws s3 sync --acl public-read --delete ./dist s3://project.$BRANCH.web/archive/<%= utils.dasherize(name) %>/$CODEBUILD_SOURCE_VERSION'
+    - bash -c 'aws s3 sync --acl public-read --delete ./dist s3://project.$BRANCH.web/<%= utils.dasherize(name) %>'
+    - bash -c 'aws s3 sync --acl public-read --delete ./dist s3://project.$BRANCH.web/archive/<%= utils.dasherize(name) %>/$CODEBUILD_SOURCE_VERSION/<%= utils.dasherize(name) %>'
+    - bash -c 'aws s3 sync --acl public-read --delete ./dist s3://project.$BRANCH.web/<%= utils.dasherize(name) %>/<%= utils.dasherize(name) %>'
+    - bash -c 'aws cloudfront create-invalidation --distribution-id $(eval echo \${DISTRIBUTION_${BRANCH^^}}) --paths "/*"'
