@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
+
+
+## [0.0.6] - 2018-09-11
+### Fixed
 - update gitignore
 - add "schematics" target in the generated package.json
 
