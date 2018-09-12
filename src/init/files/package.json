@@ -38,7 +38,7 @@
     "@angular-devkit/schematics-cli": "^0.8.1",
     "@types/jasmine": "^2.8.8",
     "@types/node": "^10.9.4",
-    "cliberry": "^0.1.4",
+    "cliberry": "^0.1.12",
     "jasmine": "^3.2.0",
     "typescript": "^3.0.3"
   }
