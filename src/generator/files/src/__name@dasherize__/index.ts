@@ -17,14 +17,14 @@ import {
   //chain,
 } from '@angular-devkit/schematics';
 import {dasherize, classify, camelize} from '@angular-devkit/core/src/utils/strings';
-//import {Schema as Options} from './schema';
+import {Schema as Options} from './schema';
 
 
 const stringUtils = {dasherize, classify, camelize};
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-export function <%= camelize(name) %>(_options: any): Rule {
+export function <%= camelize(name) %>(options: Options): Rule {
   /*return (tree: Tree, _context: SchematicContext): Rule => {
     return tree;
     // return chain[example({name: options.name})]
