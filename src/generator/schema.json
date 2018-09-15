@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "cliberry-schematics#generator",
+  "title": "cliberry-schematics init Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "alias": "n",
+      "description": "The name of the project.",
+      "type": "string",
+      "format": "html-selector",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      }
+    },
+    "description": {
+      "alias": "d",
+      "description": "Short description of the project.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 2
+      }
+    },
+    "alias": {
+      "alias": "a",
+      "description": "Aliases for a cliberry prefix.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "parameters": {
+      "alias": "p",
+      "description": "Parameters for a cliberry prefix.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "alias",
+    "parameters"
+  ]
+}

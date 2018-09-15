@@ -9,6 +9,15 @@
       "description": "Init schematics collection for cliberry.",
       "factory": "./init/index#init",
       "schema": "./init/schema.json"
+    },
+    "generator": {
+      "aliases": [
+        "g",
+        "gen"
+      ],
+      "description": "Generate schematics generator for collection of cliberry.",
+      "factory": "./generator/index#generator",
+      "schema": "./generator/schema.json"
     }
   }
 }
