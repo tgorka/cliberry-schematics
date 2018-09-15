@@ -28,6 +28,7 @@ export function generator(options: Options): Rule {
   /*return (tree: Tree) => {
     return chain([blank({name: options.name})]);
   };*/
+  console.log('opt'+JSON.stringify(options))
   return mergeWith(apply(url('./files'), [
     template({
       utils: strings,

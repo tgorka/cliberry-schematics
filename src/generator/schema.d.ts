@@ -21,5 +21,5 @@ export interface Schema {
   /**
    * Parameters of the generator.
    */
-  parameters: string;
+  parameter?: string[] | string;
 }

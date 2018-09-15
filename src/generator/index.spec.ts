@@ -19,7 +19,7 @@ describe('generator', () => {
     name: 'foo',
     description: 'foo description',
     alias: 'f',
-    parameters: 'name,description,alias',
+    parameter: ['name','description','alias'],
   };
 
   it('should create all files of a project', () => {
