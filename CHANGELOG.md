@@ -6,9 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- generator for additional generators
 ### Changed
 ### Removed
 ### Fixed
+- angular.json in the init spec.json checking
 
 
 ## [0.0.8] - 2018-09-12

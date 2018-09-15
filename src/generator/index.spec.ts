@@ -31,6 +31,7 @@ describe('generator', () => {
     expect(files.indexOf('/src/foo/schema.d.ts')).toBeGreaterThanOrEqual(0);
     expect(files.indexOf('/src/foo/index.ts')).toBeGreaterThanOrEqual(0);
     expect(files.indexOf('/src/foo/index.spec.ts')).toBeGreaterThanOrEqual(0);
+    expect(files.indexOf('/src/foo/files/.gitkeep')).toBeGreaterThanOrEqual(0);
   });
 
   it('should set the parameters in collection.json', () => {
@@ -53,10 +54,8 @@ describe('generator', () => {
     expect(schema.properties).toBeDefined();
     expect(schema.properties.name).toBeDefined();
     expect(schema.properties.description).toBeDefined();
-    expect(schema.properties.alias).toBeDefined();
     expect(schema.properties.name.type).toEqual('string');
     expect(schema.properties.description.type).toEqual('string');
-    expect(schema.properties.alias.type).toEqual('string');
-    expect(schema.required).toEqual(['name', 'description', 'alias']);
+    expect(schema.required).toEqual(['name', 'description']);
   });
 });

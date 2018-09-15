@@ -27,7 +27,6 @@ describe('init', () => {
     const tree = schematicRunner.runSchematic(schematicName, options);
     const files = tree.files;
     expect(files.indexOf('/.editorconfig')).toBeGreaterThanOrEqual(0);
-    expect(files.indexOf('/angular.json')).toBeGreaterThanOrEqual(0);
     expect(files.indexOf('/.gitignore')).toBeGreaterThanOrEqual(0);
     expect(files.indexOf('/package.json')).toBeGreaterThanOrEqual(0);
     expect(files.indexOf('/README.md')).toBeGreaterThanOrEqual(0);
