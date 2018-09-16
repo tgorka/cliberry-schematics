@@ -54,8 +54,10 @@ describe('generator', () => {
     expect(schema.properties).toBeDefined();
     expect(schema.properties.name).toBeDefined();
     expect(schema.properties.description).toBeDefined();
+    expect(schema.properties.alias).toBeDefined();
     expect(schema.properties.name.type).toEqual('string');
     expect(schema.properties.description.type).toEqual('string');
-    expect(schema.required).toEqual(['name', 'description']);
+    expect(schema.properties.alias.type).toEqual('string');
+    expect(schema.required).toEqual(['name', 'description', 'alias']);
   });
 });

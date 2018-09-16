@@ -6,10 +6,7 @@
  * found in the LICENSE file at https://github.com/tgorka/cliberry-schematics/LICENSE
  */
 export interface Schema {
-  /**
-   * The name of the generator.
-   */
-  name: string;
+  <%= schemaDPart %>
   /**
    * Short description of the generator.
    */
