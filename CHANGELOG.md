@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
+
+## [0.0.9] - 2018-09-17
+### Added
+- generator for additional generators: 
+  ```
+  cliberry schematics g --name 'name' --description 'desc' --alias a1 --alias a2 --parameter 'pass:p:password desc' --parameter login:l --parameter email
+  ```
+### Fixed
 - angular.json in the init spec.json checking
 
 
