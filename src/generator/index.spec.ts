@@ -19,7 +19,7 @@ describe('generator', () => {
     name: 'foo',
     description: 'foo description',
     alias: 'f',
-    parameter: ['name','description','alias'],
+    parameter: ['name','description::this is description','alias:a'],
   };
 
   it('should create all files of a project', () => {
@@ -40,7 +40,7 @@ describe('generator', () => {
     expect(collection.schematics.foo).toBeDefined();
     expect(collection.schematics.foo.description).toEqual('foo description');
     expect(collection.schematics.foo.schema).toEqual('./foo/schema.json');
-    expect(collection.schematics.foo.factory).toEqual('./generator/index#foo');
+    expect(collection.schematics.foo.factory).toEqual('./foo/index#foo');
     expect(collection.schematics.foo.aliases).toEqual(['f']);
   });
 
@@ -58,6 +58,12 @@ describe('generator', () => {
     expect(schema.properties.name.type).toEqual('string');
     expect(schema.properties.description.type).toEqual('string');
     expect(schema.properties.alias.type).toEqual('string');
+    expect(schema.properties.name.description).toEqual(undefined);
+    expect(schema.properties.description.description).toEqual('this is description');
+    expect(schema.properties.alias.description).toEqual(undefined);
+    expect(schema.properties.name.alias).toEqual(undefined);
+    expect(schema.properties.description.alias).toEqual(undefined);
+    expect(schema.properties.alias.alias).toEqual('a');
     expect(schema.required).toEqual(['name', 'description', 'alias']);
   });
 });

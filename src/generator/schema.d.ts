@@ -23,7 +23,7 @@ export interface Schema {
   /**
    * Aliases that will be used for the generators splited by ','
    */
-  alias: string;
+  alias?: string[] | string;
   /**
    * Parameters of the generator.
    */

@@ -7,8 +7,4 @@
  */
 export interface Schema {
   <%= schemaDPart %>
-  /**
-   * Short description of the generator.
-   */
-  description: string;
 }

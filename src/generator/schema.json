@@ -11,26 +11,17 @@
       "format": "html-selector",
       "$default": {
         "$source": "argv",
-        "index": 1
+        "index": 0
       }
     },
     "description": {
       "alias": "d",
       "description": "Short description of the project.",
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": 2
-      }
+      "type": "string"
     },
     "alias": {
       "alias": "a",
-      "description": "Aliases for a cliberry prefix.",
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": 0
-      }
+      "description": "Aliases for a cliberry prefix."
     },
     "parameter": {
       "alias": "p",
@@ -38,8 +29,6 @@
     }
   },
   "required": [
-    "name",
-    "description",
-    "alias"
+    "name"
   ]
 }

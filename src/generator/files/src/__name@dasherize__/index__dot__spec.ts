@@ -17,8 +17,7 @@ const schematicName = '<%= dasherize(name) %>';
 describe(schematicName, () => {
   const schematicRunner = new SchematicTestRunner('schematics', collectionPath);
   const defaultOptions: Options = {
-    name: 'foo',
-    description: 'foo description',
+<%= testDefaultsPart %>
   };
 
   it('should create all files of a project', () => {
